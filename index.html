@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unsal Ventures</title>
+<meta name="description" content="Unsal Ventures is a London-based group building and operating businesses in logistics, packaging, e-commerce and hospitality.">
+<meta property="og:title" content="Unsal Ventures">
+<meta property="og:description" content="A London-based group building businesses in logistics, packaging, e-commerce and hospitality.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,600;100,800;125,800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: one calm column — wordmark header, statement hero, a grid of venture cards whose logo tiles keep each brand's own ground, founder note, contact form, legal footer */
+:root{
+  --paper:#F5F6F4; --surface:#FFFFFF; --ink:#111417; --muted:#5D646C; --line:#DFE2E0;
+  --accent:#1E4D43; --accenttint:rgba(30,77,67,.08); --ok:#1E6B47; --bad:#A3262F;
+  --f-display:"Archivo","Segoe UI",system-ui,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --paper:#0F1312; --surface:#171C1B; --ink:#EDF0EE; --muted:#9AA39F; --line:#2A3230;
+  --accent:#7FC2B0; --accenttint:rgba(127,194,176,.12); --ok:#7FD0A4; --bad:#F08A90; color-scheme:dark }}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:72px}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.label{font:500 .72rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.mark{font:800 1.05rem/1 var(--f-display);font-stretch:125%;letter-spacing:.06em;text-decoration:none;color:var(--ink);white-space:nowrap}
+.mark span{color:var(--accent)}
+nav{display:flex;gap:22px}
+nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding-block:88px 72px;border-bottom:1px solid var(--line)}
+.hero h1{font:800 clamp(2.4rem,6.4vw,4.9rem)/1.0 var(--f-display);letter-spacing:-.02em;margin:18px 0 22px;max-width:16ch;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:1.2rem;color:var(--muted);max-width:56ch;margin:0}
+.facts{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:40px}
+.facts div{display:grid;gap:4px}
+.facts b{font:800 1.6rem/1 var(--f-display)}
+
+/* ventures */
+section{padding-block:80px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:32px}
+h2{font:800 clamp(1.8rem,3.6vw,2.6rem)/1.05 var(--f-display);letter-spacing:-.015em;margin:10px 0 0}
+.head p{margin:0;color:var(--muted);max-width:44ch}
+.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+.grid .card{grid-column:span 2}
+.grid .card:nth-child(4),.grid .card:nth-child(5){grid-column:span 3}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(17,20,23,.10)}
+.tile{height:168px;display:grid;place-items:center;padding:28px}
+.tile img{max-height:104px;max-width:78%;width:auto;height:auto;object-fit:contain}
+.tile.giant img{width:66%;max-height:none}
+.tile.pienar{background:#141A22}
+.tile.giant,.tile.wishrare{background:#FFFFFF}
+.tile.julius{background:#FDF9EE;padding:0}
+.tile.julius img{max-height:168px;max-width:100%}
+.tile.ruut{background:#F2F2F2}
+.tile.ruut img{max-width:72%;max-height:120px}
+.body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.body h3{font:800 1.25rem/1.2 var(--f-display);margin:0}
+.body p{margin:0;color:var(--muted);font-size:.98rem;flex:1}
+.go{margin-top:10px;font-weight:600;text-decoration:none;align-self:flex-start}
+.go:hover{text-decoration:underline}
+.soon{margin-top:10px;font:500 .74rem/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accenttint);padding:7px 10px;border-radius:99px;align-self:flex-start}
+.card.wide{grid-column:span 1}
+
+/* about */
+.about{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.about .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}
+.about p{margin:0 0 14px;max-width:60ch}
+.about ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:start}
+.contact .direct{display:grid;gap:6px;margin-top:18px}
+.contact .direct a{font-weight:600;font-size:1.1rem;text-decoration:none;word-break:break-word}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.field{display:grid;gap:6px;min-width:0}
+.field.full{grid-column:1 / -1}
+.field label{font-weight:600;font-size:.92rem}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:11px 12px;width:100%;min-width:0}
+textarea{min-height:140px;resize:vertical}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.send{grid-column:1 / -1;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+button{font:600 1rem var(--f-body);background:var(--accent);color:var(--surface);border:0;border-radius:10px;padding:12px 22px;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+#status{font-size:.95rem;min-height:1.4em}
+#status.ok{color:var(--ok)} #status.err{color:var(--bad)}
+
+footer{border-top:1px solid var(--line);padding-block:28px 40px;color:var(--muted);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid .card,.grid .card:nth-child(4){grid-column:span 1}
+  .grid .card:nth-child(5){grid-column:1 / -1}
+  .about .wrap,.contact{grid-template-columns:minmax(0,1fr);gap:28px}
+}
+@media (max-width:600px){
+  nav{gap:14px} nav a{font-size:.88rem}
+  .hero{padding-block:56px 48px}
+  section{padding-block:56px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .grid .card:nth-child(5){grid-column:auto}
+  form{grid-template-columns:minmax(0,1fr);padding:18px}
+}
+@media (max-width:420px){ nav a:not(:last-child){display:none} }
+@media (prefers-reduced-motion: reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="mark" href="#top">UNSAL <span>VENTURES</span></a>
+    <nav aria-label="Main">
+      <a href="#ventures">Ventures</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <span class="label">London · Est. 2021</span>
+      <h1>Building businesses between the <em>UK</em> and <em>Türkiye</em>.</h1>
+      <p>Unsal Ventures is a London-based group that builds and operates companies across logistics, packaging, e-commerce and hospitality.</p>
+      <div class="facts">
+        <div><b>5</b><span class="label">ventures</span></div>
+        <div><b>4</b><span class="label">sectors</span></div>
+        <div><b>UK · TR</b><span class="label">markets</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="ventures">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="label">Portfolio</span><h2>Our ventures</h2></div>
+        <p>Each business runs on its own, backed by the same hands-on operating approach.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="tile pienar"><img src="assets/pienar.png" alt="Pienar Logistics" width="560" height="231" loading="lazy"></div>
+          <div class="body">
+            <span class="label">International logistics</span>
+            <h3>Pienar Logistics</h3>
+            <p>A UK fulfilment partner for brands expanding from Türkiye into the UK and Europe: truck receiving, B2B and B2C order fulfilment, pallet and parcel distribution. Based in Grays, Essex.</p>
+            <a class="go" href="https://pienar.com" target="_blank" rel="noopener">pienar.com ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="tile giant"><img src="assets/giant.svg" alt="Giant Storage Bins" width="172" height="50" loading="lazy"></div>
+          <div class="body">
+            <span class="label">Packaging &amp; warehouse equipment</span>
+            <h3>Giant Storage Bins</h3>
+            <p>Manufacturer of recyclable corrugated pick bins for warehouses and distribution centres. Modular, made to any size, and built to fit Euro and UK pallets.</p>
+            <a class="go" href="https://giantstoragebins.co.uk" target="_blank" rel="noopener">giantstoragebins.co.uk ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="tile wishrare"><img src="assets/wishrare.png" alt="Wish RARE" width="560" height="253" loading="lazy"></div>
+          <div class="body">
+            <span class="label">Collectibles e-commerce</span>
+            <h3>WishRare</h3>
+            <p>An online store for rare die-cast collectibles from Mini GT, Hot Wheels, Greenlight and more, with free UK delivery over £20 and same-day despatch.</p>
+            <a class="go" href="https://www.wishrare.com" target="_blank" rel="noopener">wishrare.com ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="tile julius"><img src="assets/julius.jpg" alt="Julius — Caesar chicken wraps" width="520" height="520" loading="lazy"></div>
+          <div class="body">
+            <span class="label">Hospitality</span>
+            <h3>Julius</h3>
+            <p>Caesar chicken wraps, rolled tight. A lunch counter coming to Canary Wharf, with order-ahead built in from day one.</p>
+            <a class="go" href="https://eatjulius.com" target="_blank" rel="noopener">eatjulius.com ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="tile ruut"><img src="assets/ruut.jpg" alt="RUUT Coffee" width="760" height="224" loading="lazy"></div>
+          <div class="body">
+            <span class="label">Hospitality</span>
+            <h3>RUUT Coffee</h3>
+            <p>Specialty coffee at the core, with a rotating cast of London's best bakers and local makers around it. First site in Prime Central London.</p>
+            <span class="soon">Opening December 2026</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="about" id="about">
+    <div class="wrap" style="padding-block:72px">
+      <div>
+        <span class="label">About</span>
+        <h2>Operators, not only investors.</h2>
+      </div>
+      <div>
+        <p>Unsal Ventures was founded in London by Kadir Ünsal. Before building his own companies he spent seven years in FMCG sales at Mattel and L'Oréal, managing national retail accounts and setting up distributor networks.</p>
+        <p>Today the group combines that commercial background with its own logistics, packaging and retail operations. We build businesses we run ourselves, and we look for partners who want to grow in the UK.</p>
+        <ul>
+          <li>Brands from Türkiye entering the UK and Europe</li>
+          <li>Retail, wholesale and hospitality partnerships</li>
+          <li>Suppliers and landlords for our consumer concepts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <span class="label">Contact</span>
+        <h2>Let's talk.</h2>
+        <p style="color:var(--muted);margin-top:14px">Partnerships, distribution, press or anything else. We reply within two working days.</p>
+      </div>
+      <form id="cform" action="https://formsubmit.co/kadir@unsalventures.com" data-ajax="https://formsubmit.co/ajax/kadir@unsalventures.com" method="post" novalidate>
+        <input type="hidden" name="_subject" value="New enquiry from unsalventures.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://unsalventures.com/?sent=1#contact">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120"></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="160"></div>
+        <div class="field"><label for="f-company">Company <span style="color:var(--muted);font-weight:400">(optional)</span></label><input id="f-company" name="company" type="text" autocomplete="organization" maxlength="160"></div>
+        <div class="field"><label for="f-topic">Topic</label>
+          <select id="f-topic" name="topic">
+            <option>General enquiry</option>
+            <option>Partnership</option>
+            <option>Distribution</option>
+            <option>Press</option>
+          </select>
+        </div>
+        <div class="field full"><label for="f-message">Message</label><textarea id="f-message" name="message" required maxlength="5000"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="send"><button type="submit" id="f-send">Send message</button><span id="status" role="status" aria-live="polite"></span></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Unsal Ventures. Unsal Ventures is a trading name of Unsal Ltd, registered in England and Wales, company no. 13789687.</span>
+    <span>Registered office: Flat 1, 31 Long Acre, London WC2E 9LA</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form = document.getElementById("cform"), status = document.getElementById("status"), btn = document.getElementById("f-send");
+  if (new URLSearchParams(location.search).get("sent") === "1") { status.textContent = "Thanks, your message has been sent."; status.className = "ok"; }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var name = form.name.value.trim(), email = form.email.value.trim(), msg = form.message.value.trim();
+    if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || msg.length < 5) {
+      status.textContent = "Please add your name, a valid email and a short message."; status.className = "err"; return;
+    }
+    btn.disabled = true; status.textContent = "Sending…"; status.className = "";
+    fetch(form.dataset.ajax, {method: "POST", body: new FormData(form), headers: {"Accept": "application/json"}})
+      .then(function(r){ return r.json().catch(function(){ return {}; }); })
+      .then(function(res){
+        if (res.success === true || res.success === "true") { form.reset(); status.textContent = "Thanks, your message has been sent. We'll be in touch soon."; status.className = "ok"; }
+        else { status.textContent = "Sorry, the message could not be sent. Please try again in a few minutes."; status.className = "err"; }
+      })
+      .catch(function(){ status.textContent = "Sorry, the message could not be sent. Please try again in a few minutes."; status.className = "err"; })
+      .finally(function(){ btn.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
